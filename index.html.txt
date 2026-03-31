@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AR Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;">
+
+<div id="container3d_replace" style="width:100vw;height:100vh;"></div>
+
+<script src="https://cdn.unlimited3d.com/js/scripts/v1.0/unlimited3d-manager.min.js"></script>
+
+<script>
+var options = {
+  distID: 'latest',
+  solution3DName: 'hervet-fauteuil-single',
+  projectName: 'first-project',
+  solution3DID: '100234',
+  containerID: 'container3d_replace',
+};
+
+Unlimited3DManager.loadLatestDistributionScript(
+  options.solution3DID,
+  options.containerID,
+  () => {
+    Unlimited3D.init(options);
+  }
+);
+</script>
+
+</body>
+</html>
